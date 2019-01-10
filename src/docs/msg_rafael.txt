@@ -1,0 +1,43 @@
+Pessoal, tá em anexo o modelo da página inicial do site com o nav. 
+É assim que vai se organizar ele, em geral. 
+O Pedro vai fazer as outras páginas, e a parte responsiva.
+
+Home: 
+todo o conteúdo inicial. 
+Quero um tempo pra pensarmos nisso ainda. 
+Tem um slideshow, imagens a serem providenciadas.
+Barra lateral direita da home deve ter um versículo bíblico selecionado aleatoriamente, 
+vou ver com ela se ela quer fazer uma seleção ou se podemos escolher. 
+Pode ser em js ou php, depende de quem quiser fazer.
+
+Solicitar Orçamento: 
+formulário de:
+contato com nome, 
+endereço, 
+telefone 
+e e-mail. 
+
+Encaminhado para: 
+contato@aversatil.com.br. 
+Deve ter o link de um arquivo .pdf, 
+que é a folha de perfil, com uma observação de que, 
+se for do interesse do cliente, 
+pode imprimir a folha e preencher. 
+Folha de perfil em anexo.
+
+Aversatil: 
+conteúdo do flyer (em anexo)
+
+Serviços: 
+ela vai providenciar uma lista de serviços, 
+com todos os tipos de seguros. 
+Obs.: mais pra frente ela quer fazer vídeos explicando cada seguro, 
+então deixar pronto pra uma eventual manutenção, trocando imagem por vídeo...
+
+Como chegar: 
+mapa do Google, 
+endereço: Venâncio Aires 1733 | Niterói | Canoas
+
+Notícias: CMS próprio, com as postagens, título, data e hora (timestamp).
+Mais esclarecimentos, só chamar.
+ Bom trabalho pra vocês.

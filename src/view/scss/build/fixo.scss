@@ -1,0 +1,101 @@
+.fixo {
+	position: absolute;
+	top: 0;
+	min-height: 50rem;
+	width: 100%;
+
+	.button {
+		background-color: $azul-escuro;
+		border-radius: 100%;
+		color: $white;
+		width: 3rem;
+		height: 3rem;
+		position: absolute;
+		left: 81.5%;
+		transition: .2s;
+		z-index: 100;
+		@extend %vertical-center;
+
+		&:hover{
+			background-color: $azul-mais-claro !important;
+		}//fecha hover
+
+		img {
+			height: 60%;
+			@extend %horizontal-center;
+			display: block;
+		}//fecha img
+	}//fecah btn
+
+	#prev {
+		top: 3.5rem;
+
+		img {
+
+			margin-right: auto;
+			margin-left: 25%;
+		}
+	}//fecha prev
+
+	#next {
+		top: 12.5rem;
+
+		img{
+			margin-right: 25%;
+			margin-left: auto;
+			transform: rotate(180deg);
+		}
+	}//fecha next
+
+	.banner-img {
+		border-bottom: .2rem solid $azul-claro;
+		height: $altura-banner-img;
+		width: 100%;
+		overflow: hidden;
+		padding-left: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		img {
+			width: 100%;
+			position: relative;
+			top: -2rem;
+		}//fecha img
+
+		img:not(.show){
+			display: none;
+		}//fecha img
+
+	}//fecha banner-img
+
+	.frases {
+		display: flex;
+		background-image: linear-gradient(to bottom, $azul-escuro, $white);
+		height: 50rem;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 1;
+		@extend %vertical-center;
+
+		p {
+			color: $white;
+			text-align: center;
+			// text-transform: ;
+			width: 80%;
+			@extend %horizontal-center;
+			@extend %roboto;
+			font-weight: 900;
+			letter-spacing: 1px;
+
+			span {
+				color: $azul-escuro;
+				display: block;
+				padding-top: 1rem;
+				font-size: .8rem;
+				line-height: .8rem;
+			}
+		}//fecha p
+	}//fecha aside
+}//fecha fixo

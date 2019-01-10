@@ -1,0 +1,150 @@
+header.forPhp{
+	min-height: auto;
+	height: 3rem;
+
+	nav {
+
+		ul {
+			li {
+
+				&:hover {
+
+					&::before {
+						transform: scaleY(0) !important;
+					}
+				}
+
+				&.open {
+					& > a {
+						background-color: $azul-claro !important;
+					}
+				}
+
+				ul.dropdown-menu {
+					background-color: $azul-escuro;
+
+					a:hover {
+						background-color: $azul-claro;
+					}
+				}
+
+
+				&.active {
+					background-color: $azul-mais-claro;
+
+					&::before {
+						transform: scaleY(0) !important;
+					}
+				}
+
+			}
+		}
+	}
+}
+
+
+
+header {
+	background-color: $azul-claro;
+	min-height: 2rem;
+	height: 4rem;
+	position: relative;
+
+
+	#logo {
+		background-color: $white;
+		border-radius: 100%;
+		box-shadow: 0 0 0 .3rem $sombra;
+		height: 13rem;
+		left: 0;
+		padding: 1rem;
+		position: relative;
+		top: -.3rem;
+		transition: .5s;
+		width: 13rem;
+		z-index: 1000;
+		@extend %vertical-center;
+
+		&:hover{
+			box-shadow: 0 0 0 .5rem $azul-escuro;
+		}
+		a{
+			@extend %vertical-center;
+			img {
+				@extend %horizontal-center;
+				width: 90%;
+			}
+		}//fecha a
+
+		&.active {
+			box-shadow: 0 0 0 .6rem $azul-mais-claro;
+		}
+
+	}//fecha logo
+	nav.navbar {
+		background-color: $azul-escuro;
+		border: none;
+		border-radius: 0;
+		bottom: 0;
+		box-shadow: 0 .1rem .2rem $sombra;
+		font-size: 1.1rem;
+		left: 0;
+		margin-bottom: 0;
+		position: absolute;
+		width: 100%;
+		z-index: 10;
+		@extend %maven-pro;
+
+		ul {
+
+			li {
+				transition: .1s;
+				position: relative;
+
+				&::before {
+					content: ' ';
+					display: block;
+					position: absolute;
+					border-bottom: .3rem solid $azul-escuro;
+					top: 0;
+					left:0;
+					right: 0;
+					bottom: 0;
+					background-color: $azul-claro;
+					transition: .2s;
+					transition-timing-function: cubic-bezier(0.02, 0.29, 0.58, 1);
+					transform: scaleY(0);
+					transform-origin: top;
+				}
+
+
+				&:hover {
+
+					&::before {
+
+						transform: scaleY(1.1);
+					}
+				}
+
+				a{
+
+					color: $white !important;
+				}
+			}
+
+			li.active {
+				&:before {
+					background-color: $azul-claro;
+					border-bottom-color: $azul-mais-claro;
+					transform: scaleY(1.1);
+				}
+
+				> a {
+					background-color: transparent !important;
+				}
+
+			}
+
+		}
+	}
+}

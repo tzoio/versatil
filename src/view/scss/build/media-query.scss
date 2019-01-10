@@ -1,0 +1,262 @@
+@media (max-width: 767px) {
+  .container {
+    width: 750px;
+  }
+
+  header {
+    #logo {
+      display: none;
+    }
+    background-color: $white;
+    background-image: url('img/logo-completa.png');
+    background-size: auto 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 13rem !important;
+    border-bottom: .2rem solid $azul-claro;
+
+    nav {
+      background-color: transparent !important;
+      position: relative !important;
+      bottom: auto !important;
+      top: 0 !important;
+      box-shadow: none !important;
+
+      .container {
+        padding: 0 !important;
+
+        button {
+          height: 3rem;
+          width: 3rem;
+          position: absolute !important;
+          right: -.2rem;
+          top: 0;
+          z-index: 1000;
+          background-color: $white !important;
+          border: none !important;
+
+          span.icon-bar {
+            display: block !important;
+            background-color: $azul-escuro !important;
+            margin: 0 auto;
+            height: .2rem !important;
+          }
+        }
+
+        div {
+          width: 100% !important;
+          margin-right: 0 !important;
+          margin-left: 0 !important;
+          ul {
+            margin-bottom: 0 !important;
+            margin-top: 0 !important;
+            li {
+              background-color: $azul-escuro;
+
+              &::before {
+                border: none;
+              }
+
+              &:hover {
+                &::before {
+                  transform: scaleY(1);
+                }
+              }
+
+              &.active::before {
+                transform: scaleY(1);
+              }
+            }
+          }
+        }
+
+        .section-title {
+          background-color: $white;
+          border-top: .2rem solid $azul-claro;
+          width: 80%;
+          margin-left: 0;
+
+          h1 {
+            text-align: center;
+            width: 100%;
+          }
+        }
+
+
+
+      }  
+    }
+  }//fecha header
+
+  .iframe {
+    height: 15rem !important;
+  }
+
+  footer {
+    height: 18rem;
+
+    div.container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+
+      div {
+        margin: 0 !important;
+
+      }
+
+      div.pull-left {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 80%;
+      }
+
+      div.pull-right {
+        clear:both;
+        position: static !important;
+      }
+
+      div.logo-traco {
+        width: 150%;
+        top: 2rem;
+      }
+    }
+  }
+
+  .navbar-form {
+
+    button {
+      width: 70% !important;
+    }
+  }
+
+
+}//fecha max768
+
+@media (max-width: 992px) {
+  .navbar-form {
+    width: 100%;
+    .form-group {
+      width: 100%;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    button {
+      margin-top: .5rem;
+      width: 30%;
+    }
+  }
+
+
+
+  .container {
+    width: 100%;
+  }
+
+  .frases {
+      display: none !important;
+  }
+
+
+  .default {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    .section-title {
+      border-top: 0 !important;
+
+      h1 {
+        border-bottom: .3rem solid $azul-mais-claro;
+        width: 70%;
+      }
+    }
+  }//fecha default
+  .content {
+    padding-top: 7rem;
+  }
+
+  .button {
+    background-color: transparentize($azul-escuro, .7) !important;
+    height: $altura-banner-img !important;
+    top: 0 !important;
+    border-radius: 0 !important;
+    left: auto !important;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    &#next {
+      right: 0;
+    }
+
+    &#prev {
+      left: 0;
+    }
+
+    img {
+      height: 3rem !important;
+      margin: 0 !important;
+    }
+  }//fecha button
+
+  .news {
+    .row {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  form {
+    display: flex;          
+    flex-direction: column;
+    justify-content: center;
+
+    .btn {
+      align-self: center;
+    }
+  }
+
+
+  .contato {
+    border-left: none !important;
+    height: 15rem !important;
+    display: flex;          
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+}//fecha max992
+
+@media (max-width: 1200px) {
+  .news {
+    // .notice:nth-of-type(2n) {
+    //   margin-right: 25%;
+    // }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+  }
+}//fecha max1200
+
+
+
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}//fecha min1200
+
+
+
+@media (min-width: 992px) {
+}//fecha min992
+
+
+@media (min-width: 768px) {
+}//fecha min992

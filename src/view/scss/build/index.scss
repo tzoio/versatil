@@ -1,0 +1,415 @@
+@import '../help/base/normalize';
+@import '../help/base/reset';
+@import '../help/base/bootstrap';
+
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:900|Roboto:400,700,900');
+// 1 - variaveis
+
+$black: #000;
+$white: #fff;
+$azul-mais-claro: #91d8f7;
+$azul-claro: #889fac;
+$azul-escuro: #264977;
+$sombra: rgba(0, 0, 0, .3);
+$altura-banner-img: 30rem;
+$gray: lighten(#292a2b,20%);//code #5b5d5f
+$dark-gray: #292e40;
+// 2 - mixins e placeholders
+
+%background-dark-gray {
+	background-color: $dark-gray;
+}
+
+%full-height {
+	display: inline-block;
+	height: 100%;
+}
+
+%vertical-center {
+	align-items: center;
+	display: flex;
+}
+
+%horizontal-center {
+	margin: 0 auto;
+}
+
+%roboto {
+	font-family: 'Roboto', sans-serif;
+}
+
+%maven-pro {
+	font-family: 'Maven Pro', serif;
+}
+// 4 - geral
+
+.pull-right{
+	float: right;
+}
+
+.pull-left{
+	float: left;
+}
+
+a:hover{
+	cursor: pointer !important;
+}
+
+body{
+	@extend %roboto;
+}
+
+.full-width {
+	width: 100%;
+}
+//new scss
+
+p {
+	line-height: 1.5rem;
+}
+
+hr {
+	height: .2rem;
+	width: 100%;
+	background-color: $azul-mais-claro;
+	margin-top: 0;
+	margin-bottom: 2rem;
+	float: left;
+}
+
+.no-margin-left {
+		margin-left: 0 !important;
+}
+
+.alert {
+	margin-top: 1rem;
+}
+
+#noticiaSize {
+	height: 10rem;
+}
+
+.panel-title {
+	font-size: 1.2rem;
+}
+
+.navbar-form {
+	width: 100%;
+	.form-group {
+		width: 89%;
+
+		input {
+			width: 100%;
+		}
+	}
+
+	button {
+		width: 10%;
+	}
+}
+
+.container.forPhp {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.row.forPhp {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+	.container-fluid {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.panel, .alert {
+		width: 100%;
+	}
+
+
+
+	table {
+		width: 70%;
+		thead {
+			tr {
+				th:last-of-type {				
+					width: 20%;
+				}
+			}
+		}
+	}
+}
+
+.content.forPhp {
+	margin-top: 5rem;
+}
+
+@import 'header';
+
+
+
+
+section {
+
+	margin-bottom: 5rem;
+ 	position: relative;
+
+	.container {
+		position: relative;
+		height: auto;
+
+		.content {
+			top: 14rem;
+			left: 0;
+			min-height: 45rem;
+			height: auto;
+
+			div.default {
+				margin-top: 12rem;
+				margin-left: .2rem;
+
+				.panel {
+					border-color: transparent;
+					box-shadow: 1px 1px 2px $sombra;
+					border-bottom-right-radius: 0;
+					border-bottom-left-radius: 0;
+					.panel-heading {
+						background-color: transparentize($azul-claro, .6);
+						border-color: $azul-claro;
+						border-width: .2rem;
+						.panel-title {
+							color: $azul-escuro;
+							@extend %maven-pro;
+						}
+					}
+
+					.panel-body {
+					}
+				}
+
+
+
+				img {
+					margin-top: 1rem;
+					padding-left: 0;
+				}
+
+				h1{
+						@extend %maven-pro;
+						color: $azul-escuro;
+				}
+
+				p{
+					color: $azul-escuro;
+					@extend %horizontal-center;
+					@extend %roboto;
+					padding-left: 0;
+				}//fecha p
+
+				.section-title {
+					background-color: $white;
+					border-top: .2rem solid $azul-claro;
+					width: auto;
+					padding-left: 1rem;
+					padding-bottom: 2rem;
+
+					h1 {
+						margin-top: .5rem;
+					}
+				}
+
+			}//fecha div
+
+			form {
+					*:focus {
+							border-color: $azul-mais-claro;
+					}
+
+					.btn-primary {
+						background-color: $azul-escuro;
+						font-size: 1.2rem;
+						border: none;
+						transition: .1s;
+
+						&:hover {
+							background-color: $azul-mais-claro;
+						}
+					}
+
+				.form-group {
+					margin-left: 0;
+					margin-top: 1rem;
+
+					&:first-of-type {
+						margin-top: 0;
+					}
+
+					label {
+						color: $azul-escuro;
+					}
+
+					textarea {
+						max-width: 100%;
+						min-height: 7rem;
+					}
+				}//fecha form-group
+			}//fecha form
+
+			.contato {
+				border-left: .1rem dashed $sombra;
+				display: flex;
+				height: 22rem;
+				@extend %vertical-center;
+
+				ul {
+					@extend %horizontal-center;
+
+					li {
+						color: $azul-escuro;
+						font-size: 1.1rem;
+						text-align: center;
+						margin-top: 1.8rem;
+
+						&:first-of-type {
+							margin-top: 0;
+						}
+
+						&:last-of-type {
+							font-size: 1rem;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+
+							a.btn {
+								margin-top: .5rem;
+							}
+						}
+					}
+				}
+			}
+
+			div.sub-title {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				border-bottom: .2rem solid $azul-mais-claro;
+				width: 30%;
+				h2 {
+					color: $azul-escuro;
+					text-align: center;
+					@extend %maven-pro;
+				}
+			}//fecha subtitle
+		}//fecha content
+
+		.iframe {
+			height: 25rem;
+			position: relative;
+			margin: 0;
+
+			iframe {
+					width: 100%;
+					height: inherit;
+			}
+		}
+
+	}//fecha container
+}//fecha section
+
+.section-title.noticia {
+	height: 3rem !important;
+	margin-bottom: 2rem;
+}
+
+.news {
+	.row {
+		margin-bottom: 1.5rem;
+		margin-left: .2rem;
+
+		.notice {
+			background-color: $black;
+			height: 15rem;
+			margin-right: 1rem;
+			margin-bottom: 1rem;
+			padding: 0;
+			position: relative;
+			overflow: hidden;
+			z-index: 1;
+
+			a {
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+
+
+			.background {
+				width: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 0;
+			}
+
+			.title {
+				background-color: transparentize($azul-mais-claro, .5);
+				display: flex;
+				width: 100%;
+				flex-direction: column;
+				align-items: flex-start;
+				top: 0;
+				left: 0;
+
+				h3 {
+					@extend %maven-pro;
+					margin: 0;
+					font-size: 1.3rem;
+				}
+
+				.pull-right {
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+
+					p {
+						font-size: .8rem !important;
+						text-align: left;
+					}
+				}
+			}
+
+			.synthesis {
+				background-color: transparentize($azul-claro, .1);
+				bottom: 0;
+				left: 0;
+				position: absolute;
+				height: 5rem;
+				width: 100%;
+
+				p {
+					color: $azul-escuro;
+					font-size: .8rem;
+					line-height: .9rem;
+				}
+			}
+
+			.title, .synthesis {
+				padding: .6rem;
+				position: absolute;
+				z-index: 1;
+			}
+		}
+	}
+}
+
+
+@import 'fixo';
+@import 'footer';
+
+
+//end new scss
+@import 'media-query';

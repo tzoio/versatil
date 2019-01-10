@@ -1,0 +1,116 @@
+footer.forPhp {
+	position: relative;
+	bottom: -7.2rem;
+	left: 0;
+	height: 3rem;
+	background-color: transparent;
+	border-top: none;
+}
+
+
+footer {
+	background-color: $azul-escuro;
+	border-top: .3rem solid $azul-claro;
+	bottom: -13rem;
+	color: $white;
+	height: 14rem;
+	left: 0;
+	overflow: hidden;
+	padding-top: 3rem;
+	padding-bottom: 1rem;
+	position: relative;
+
+	.footer-link {
+		color: inherit;
+		display: inline-block;
+		text-decoration: none;
+		transition: 1s ease-in-out;
+
+		&:hover {
+				color: $azul-mais-claro;
+				font-weight: bold;
+				transform: rotate(-5deg);
+		}
+
+		&:active {
+			transform: translate(10rem, 0);
+		}
+	}
+
+	.container {
+		align-items: flex-end;
+		display: flex;
+		flex-direction: row;
+		height: auto;
+		position: relative;
+		margin-top: -1.5rem;
+		z-index: 1;
+
+		div {
+			padding: .5rem;
+		}
+		*:not(.logo-traco) {
+			position: relative;
+			z-index: 1;
+		}
+		.logo-traco {
+				display: none;
+				position: absolute;
+				top: -2rem;
+				right: 30%;
+				z-index: 0;
+				img {
+						width: 40%;
+						height: auto;
+						float: right;
+				}
+		}
+
+		div.pull-left {
+			margin-left: 3rem;
+			ul {
+				li {
+					h3 {
+						font-size: 1.2rem;
+					}
+				}
+			}
+		}
+
+		div.pull-right {
+			margin-right: 3rem;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			@extend %vertical-center;
+			font-size: .8rem;
+		}
+	}
+}
+
+.footer-wemake {
+	background-color: transparentize($dark-gray, .2);
+	position: absolute;
+	bottom: 0;
+	display: table;
+	text-align: center;
+	vertical-align: middle;
+	width: 100%;
+
+	div {
+		display: table-cell;
+		padding: 10px;
+		font-size: 13px;
+		margin: 0;
+
+		a {
+			font-family: "Times New Roman", Times, serif;
+			color: transparentize($white, .5);		
+			font-size: inherit;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
